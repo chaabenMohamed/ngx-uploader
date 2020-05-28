@@ -1,4 +1,5 @@
-import { EventEmitter, ɵɵdirectiveInject, ElementRef, ɵɵdefineDirective, ɵɵlistener, ɵsetClassMetadata, Directive, Input, Output, HostListener, ɵɵdefineNgModule, ɵɵdefineInjector, ɵɵsetNgModuleScope, NgModule } from '@angular/core';
+import { __decorate, __metadata } from 'tslib';
+import { EventEmitter, ElementRef, Input, Output, HostListener, Directive, NgModule } from '@angular/core';
 import { Subject, Observable } from 'rxjs';
 import { mergeMap, finalize } from 'rxjs/operators';
 
@@ -297,7 +298,7 @@ class NgUploaderService {
     }
 }
 
-class NgFileDropDirective {
+let NgFileDropDirective = class NgFileDropDirective {
     constructor(elementRef) {
         this.elementRef = elementRef;
         this.stopEvent = (e) => {
@@ -348,34 +349,48 @@ class NgFileDropDirective {
         const event = { type: 'dragOut' };
         this.uploadOutput.emit(event);
     }
-}
-NgFileDropDirective.ɵfac = function NgFileDropDirective_Factory(t) { return new (t || NgFileDropDirective)(ɵɵdirectiveInject(ElementRef)); };
-NgFileDropDirective.ɵdir = ɵɵdefineDirective({ type: NgFileDropDirective, selectors: [["", "ngFileDrop", ""]], hostBindings: function NgFileDropDirective_HostBindings(rf, ctx) { if (rf & 1) {
-        ɵɵlistener("drop", function NgFileDropDirective_drop_HostBindingHandler($event) { return ctx.onDrop($event); })("dragover", function NgFileDropDirective_dragover_HostBindingHandler($event) { return ctx.onDragOver($event); })("dragleave", function NgFileDropDirective_dragleave_HostBindingHandler($event) { return ctx.onDragLeave($event); });
-    } }, inputs: { options: "options", uploadInput: "uploadInput" }, outputs: { uploadOutput: "uploadOutput" } });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(NgFileDropDirective, [{
-        type: Directive,
-        args: [{
-                selector: '[ngFileDrop]'
-            }]
-    }], function () { return [{ type: ElementRef }]; }, { options: [{
-            type: Input
-        }], uploadInput: [{
-            type: Input
-        }], uploadOutput: [{
-            type: Output
-        }], onDrop: [{
-            type: HostListener,
-            args: ['drop', ['$event']]
-        }], onDragOver: [{
-            type: HostListener,
-            args: ['dragover', ['$event']]
-        }], onDragLeave: [{
-            type: HostListener,
-            args: ['dragleave', ['$event']]
-        }] }); })();
+};
+NgFileDropDirective.ctorParameters = () => [
+    { type: ElementRef }
+];
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], NgFileDropDirective.prototype, "options", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", EventEmitter)
+], NgFileDropDirective.prototype, "uploadInput", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", EventEmitter)
+], NgFileDropDirective.prototype, "uploadOutput", void 0);
+__decorate([
+    HostListener('drop', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Object]),
+    __metadata("design:returntype", void 0)
+], NgFileDropDirective.prototype, "onDrop", null);
+__decorate([
+    HostListener('dragover', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Event]),
+    __metadata("design:returntype", void 0)
+], NgFileDropDirective.prototype, "onDragOver", null);
+__decorate([
+    HostListener('dragleave', ['$event']),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [Event]),
+    __metadata("design:returntype", void 0)
+], NgFileDropDirective.prototype, "onDragLeave", null);
+NgFileDropDirective = __decorate([
+    Directive({
+        selector: '[ngFileDrop]'
+    }),
+    __metadata("design:paramtypes", [ElementRef])
+], NgFileDropDirective);
 
-class NgFileSelectDirective {
+let NgFileSelectDirective = class NgFileSelectDirective {
     constructor(elementRef) {
         this.elementRef = elementRef;
         this.fileListener = () => {
@@ -407,34 +422,37 @@ class NgFileSelectDirective {
             this._sub.forEach(sub => sub.unsubscribe());
         }
     }
-}
-NgFileSelectDirective.ɵfac = function NgFileSelectDirective_Factory(t) { return new (t || NgFileSelectDirective)(ɵɵdirectiveInject(ElementRef)); };
-NgFileSelectDirective.ɵdir = ɵɵdefineDirective({ type: NgFileSelectDirective, selectors: [["", "ngFileSelect", ""]], inputs: { options: "options", uploadInput: "uploadInput" }, outputs: { uploadOutput: "uploadOutput" } });
-/*@__PURE__*/ (function () { ɵsetClassMetadata(NgFileSelectDirective, [{
-        type: Directive,
-        args: [{
-                selector: '[ngFileSelect]'
-            }]
-    }], function () { return [{ type: ElementRef }]; }, { options: [{
-            type: Input
-        }], uploadInput: [{
-            type: Input
-        }], uploadOutput: [{
-            type: Output
-        }] }); })();
+};
+NgFileSelectDirective.ctorParameters = () => [
+    { type: ElementRef }
+];
+__decorate([
+    Input(),
+    __metadata("design:type", Object)
+], NgFileSelectDirective.prototype, "options", void 0);
+__decorate([
+    Input(),
+    __metadata("design:type", EventEmitter)
+], NgFileSelectDirective.prototype, "uploadInput", void 0);
+__decorate([
+    Output(),
+    __metadata("design:type", EventEmitter)
+], NgFileSelectDirective.prototype, "uploadOutput", void 0);
+NgFileSelectDirective = __decorate([
+    Directive({
+        selector: '[ngFileSelect]'
+    }),
+    __metadata("design:paramtypes", [ElementRef])
+], NgFileSelectDirective);
 
-class NgxUploaderModule {
-}
-NgxUploaderModule.ɵmod = ɵɵdefineNgModule({ type: NgxUploaderModule });
-NgxUploaderModule.ɵinj = ɵɵdefineInjector({ factory: function NgxUploaderModule_Factory(t) { return new (t || NgxUploaderModule)(); } });
-(function () { (typeof ngJitMode === "undefined" || ngJitMode) && ɵɵsetNgModuleScope(NgxUploaderModule, { declarations: [NgFileDropDirective, NgFileSelectDirective], exports: [NgFileDropDirective, NgFileSelectDirective] }); })();
-/*@__PURE__*/ (function () { ɵsetClassMetadata(NgxUploaderModule, [{
-        type: NgModule,
-        args: [{
-                declarations: [NgFileDropDirective, NgFileSelectDirective],
-                exports: [NgFileDropDirective, NgFileSelectDirective]
-            }]
-    }], null, null); })();
+let NgxUploaderModule = class NgxUploaderModule {
+};
+NgxUploaderModule = __decorate([
+    NgModule({
+        declarations: [NgFileDropDirective, NgFileSelectDirective],
+        exports: [NgFileDropDirective, NgFileSelectDirective]
+    })
+], NgxUploaderModule);
 
 /*
  * Public API Surface of ngx-uploader
