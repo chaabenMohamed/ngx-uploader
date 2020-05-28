@@ -580,47 +580,33 @@
             var event = { type: 'dragOut' };
             this.uploadOutput.emit(event);
         };
-        NgFileDropDirective.ctorParameters = function () { return [
-            { type: core.ElementRef }
-        ]; };
-        __decorate([
-            core.Input(),
-            __metadata("design:type", Object)
-        ], NgFileDropDirective.prototype, "options", void 0);
-        __decorate([
-            core.Input(),
-            __metadata("design:type", core.EventEmitter)
-        ], NgFileDropDirective.prototype, "uploadInput", void 0);
-        __decorate([
-            core.Output(),
-            __metadata("design:type", core.EventEmitter)
-        ], NgFileDropDirective.prototype, "uploadOutput", void 0);
-        __decorate([
-            core.HostListener('drop', ['$event']),
-            __metadata("design:type", Function),
-            __metadata("design:paramtypes", [Object]),
-            __metadata("design:returntype", void 0)
-        ], NgFileDropDirective.prototype, "onDrop", null);
-        __decorate([
-            core.HostListener('dragover', ['$event']),
-            __metadata("design:type", Function),
-            __metadata("design:paramtypes", [Event]),
-            __metadata("design:returntype", void 0)
-        ], NgFileDropDirective.prototype, "onDragOver", null);
-        __decorate([
-            core.HostListener('dragleave', ['$event']),
-            __metadata("design:type", Function),
-            __metadata("design:paramtypes", [Event]),
-            __metadata("design:returntype", void 0)
-        ], NgFileDropDirective.prototype, "onDragLeave", null);
-        NgFileDropDirective = __decorate([
-            core.Directive({
-                selector: '[ngFileDrop]'
-            }),
-            __metadata("design:paramtypes", [core.ElementRef])
-        ], NgFileDropDirective);
+        NgFileDropDirective.ɵfac = function NgFileDropDirective_Factory(t) { return new (t || NgFileDropDirective)(core.ɵɵdirectiveInject(core.ElementRef)); };
+        NgFileDropDirective.ɵdir = core.ɵɵdefineDirective({ type: NgFileDropDirective, selectors: [["", "ngFileDrop", ""]], hostBindings: function NgFileDropDirective_HostBindings(rf, ctx) { if (rf & 1) {
+                core.ɵɵlistener("drop", function NgFileDropDirective_drop_HostBindingHandler($event) { return ctx.onDrop($event); })("dragover", function NgFileDropDirective_dragover_HostBindingHandler($event) { return ctx.onDragOver($event); })("dragleave", function NgFileDropDirective_dragleave_HostBindingHandler($event) { return ctx.onDragLeave($event); });
+            } }, inputs: { options: "options", uploadInput: "uploadInput" }, outputs: { uploadOutput: "uploadOutput" } });
         return NgFileDropDirective;
     }());
+    /*@__PURE__*/ (function () { core.ɵsetClassMetadata(NgFileDropDirective, [{
+            type: core.Directive,
+            args: [{
+                    selector: '[ngFileDrop]'
+                }]
+        }], function () { return [{ type: core.ElementRef }]; }, { options: [{
+                type: core.Input
+            }], uploadInput: [{
+                type: core.Input
+            }], uploadOutput: [{
+                type: core.Output
+            }], onDrop: [{
+                type: core.HostListener,
+                args: ['drop', ['$event']]
+            }], onDragOver: [{
+                type: core.HostListener,
+                args: ['dragover', ['$event']]
+            }], onDragLeave: [{
+                type: core.HostListener,
+                args: ['dragleave', ['$event']]
+            }] }); })();
 
     var NgFileSelectDirective = /** @class */ (function () {
         function NgFileSelectDirective(elementRef) {
@@ -656,41 +642,38 @@
                 this._sub.forEach(function (sub) { return sub.unsubscribe(); });
             }
         };
-        NgFileSelectDirective.ctorParameters = function () { return [
-            { type: core.ElementRef }
-        ]; };
-        __decorate([
-            core.Input(),
-            __metadata("design:type", Object)
-        ], NgFileSelectDirective.prototype, "options", void 0);
-        __decorate([
-            core.Input(),
-            __metadata("design:type", core.EventEmitter)
-        ], NgFileSelectDirective.prototype, "uploadInput", void 0);
-        __decorate([
-            core.Output(),
-            __metadata("design:type", core.EventEmitter)
-        ], NgFileSelectDirective.prototype, "uploadOutput", void 0);
-        NgFileSelectDirective = __decorate([
-            core.Directive({
-                selector: '[ngFileSelect]'
-            }),
-            __metadata("design:paramtypes", [core.ElementRef])
-        ], NgFileSelectDirective);
+        NgFileSelectDirective.ɵfac = function NgFileSelectDirective_Factory(t) { return new (t || NgFileSelectDirective)(core.ɵɵdirectiveInject(core.ElementRef)); };
+        NgFileSelectDirective.ɵdir = core.ɵɵdefineDirective({ type: NgFileSelectDirective, selectors: [["", "ngFileSelect", ""]], inputs: { options: "options", uploadInput: "uploadInput" }, outputs: { uploadOutput: "uploadOutput" } });
         return NgFileSelectDirective;
     }());
+    /*@__PURE__*/ (function () { core.ɵsetClassMetadata(NgFileSelectDirective, [{
+            type: core.Directive,
+            args: [{
+                    selector: '[ngFileSelect]'
+                }]
+        }], function () { return [{ type: core.ElementRef }]; }, { options: [{
+                type: core.Input
+            }], uploadInput: [{
+                type: core.Input
+            }], uploadOutput: [{
+                type: core.Output
+            }] }); })();
 
     var NgxUploaderModule = /** @class */ (function () {
         function NgxUploaderModule() {
         }
-        NgxUploaderModule = __decorate([
-            core.NgModule({
-                declarations: [NgFileDropDirective, NgFileSelectDirective],
-                exports: [NgFileDropDirective, NgFileSelectDirective]
-            })
-        ], NgxUploaderModule);
+        NgxUploaderModule.ɵmod = core.ɵɵdefineNgModule({ type: NgxUploaderModule });
+        NgxUploaderModule.ɵinj = core.ɵɵdefineInjector({ factory: function NgxUploaderModule_Factory(t) { return new (t || NgxUploaderModule)(); } });
         return NgxUploaderModule;
     }());
+    (function () { (typeof ngJitMode === "undefined" || ngJitMode) && core.ɵɵsetNgModuleScope(NgxUploaderModule, { declarations: [NgFileDropDirective, NgFileSelectDirective], exports: [NgFileDropDirective, NgFileSelectDirective] }); })();
+    /*@__PURE__*/ (function () { core.ɵsetClassMetadata(NgxUploaderModule, [{
+            type: core.NgModule,
+            args: [{
+                    declarations: [NgFileDropDirective, NgFileSelectDirective],
+                    exports: [NgFileDropDirective, NgFileSelectDirective]
+                }]
+        }], null, null); })();
 
     exports.NgFileDropDirective = NgFileDropDirective;
     exports.NgFileSelectDirective = NgFileSelectDirective;

@@ -1,6 +1,6 @@
 {
   "name": "ngx-uploader",
-  "version": "8.0.0",
+  "version": "9.0.1",
   "homepage": "https://ngx-uploader.com",
   "repository": {
     "type": "git",
@@ -25,6 +25,8 @@
   "fesm5": "fesm5/ngx-uploader.js",
   "fesm2015": "fesm2015/ngx-uploader.js",
   "typings": "ngx-uploader.d.ts",
-  "metadata": "ngx-uploader.metadata.json",
-  "sideEffects": false
+  "sideEffects": false,
+  "scripts": {
+    "prepublishOnly": "node --eval \"console.error('ERROR: Trying to publish a package that has been compiled by Ivy. This is not allowed.\\nPlease delete and rebuild the package, without compiling with Ivy, before attempting to publish.\\n')\" && exit 1"
+  }
 }

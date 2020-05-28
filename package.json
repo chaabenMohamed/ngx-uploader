@@ -1,5 +1,5 @@
 {
-  "name": "ngx-uploader-demo",
+  "name": "ngx-uploader",
   "version": "9.0.1",
   "repository": {
     "type": "git",
@@ -12,6 +12,7 @@
   "bugs": {
     "url": "https://github.com/bleenco/ngx-uploader/issues"
   },
+  "main": "./dist/",
   "homepage": "http://ngx-uploader.com",
   "scripts": {
     "ng": "ng",
