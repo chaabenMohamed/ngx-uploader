@@ -1,6 +1,6 @@
 {
   "name": "ngx-uploader-demo",
-  "version": "9.0.0",
+  "version": "9.0.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/bleenco/ngx-uploader.git"

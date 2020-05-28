@@ -1,0 +1,9 @@
+/*
+ * Public API Surface of ngx-uploader
+ */
+export * from './lib/interfaces';
+export * from './lib/ng-file-drop.directive';
+export * from './lib/ng-file-select.directive';
+export * from './lib/ngx-uploader.class';
+export * from './lib/ngx-uploader.module';
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicHVibGljX2FwaS5qcyIsInNvdXJjZVJvb3QiOiJuZzovL25neC11cGxvYWRlci8iLCJzb3VyY2VzIjpbInB1YmxpY19hcGkudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7O0dBRUc7QUFFSCxjQUFjLGtCQUFrQixDQUFDO0FBQ2pDLGNBQWMsOEJBQThCLENBQUM7QUFDN0MsY0FBYyxnQ0FBZ0MsQ0FBQztBQUMvQyxjQUFjLDBCQUEwQixDQUFDO0FBQ3pDLGNBQWMsMkJBQTJCLENBQUMiLCJzb3VyY2VzQ29udGVudCI6WyIvKlxuICogUHVibGljIEFQSSBTdXJmYWNlIG9mIG5neC11cGxvYWRlclxuICovXG5cbmV4cG9ydCAqIGZyb20gJy4vbGliL2ludGVyZmFjZXMnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvbmctZmlsZS1kcm9wLmRpcmVjdGl2ZSc7XG5leHBvcnQgKiBmcm9tICcuL2xpYi9uZy1maWxlLXNlbGVjdC5kaXJlY3RpdmUnO1xuZXhwb3J0ICogZnJvbSAnLi9saWIvbmd4LXVwbG9hZGVyLmNsYXNzJztcbmV4cG9ydCAqIGZyb20gJy4vbGliL25neC11cGxvYWRlci5tb2R1bGUnO1xuIl19
